@@ -10,22 +10,22 @@ public class AplicationProduct {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        Product product = new Product();
 
-        System.out.println("Product: ");
-        product.name = sc.nextLine().toUpperCase();
-        System.out.println("Price: ");
-        product.price = sc.nextDouble();
-        System.out.println("Quantity: ");
-        product.quantity = sc.nextInt();
+        System.out.print("Product: ");
+        String name = sc.nextLine().toUpperCase();
+        System.out.print("Price: ");
+        double price = sc.nextDouble();
+        System.out.print("Quantity: ");
+        int quantity = sc.nextInt();
+        Product product = new Product(name, price, quantity);
 
         System.out.println("Update data product: " + product.toString());
-        System.out.println("Add product quantity: ");
+        System.out.print("Add product quantity: ");
 
         product.addQuantity(sc.nextInt());
 
         System.out.println("Update data product: " + product.toString());
-        System.out.println("Remove product quantity: ");
+        System.out.print("Remove product quantity: ");
 
         product.removeQuantity(sc.nextInt());
 

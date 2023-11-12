@@ -10,7 +10,7 @@ public class AplicationDollar {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        
+
         System.out.print("What is the dollar price? ");
 
         double dollar = sc.nextDouble();

@@ -5,6 +5,11 @@ public class Product {
     public double price;
     public int quantity;
 
+    public Product (double price, int quantity) {
+        this.name = "TV";
+        this.price = price;
+        this.quantity = quantity;
+    }
     public double totalValorProduct(){
         return this.quantity * this.price;
     }
