@@ -9,6 +9,11 @@ public class Conta {
         this.numeroConta = numeroConta;
         this.titular = titular;
     }
+    public Conta(int numeroConta, String titular, double inicialDeposito){
+        this.numeroConta = numeroConta;
+        this.titular = titular;
+        addConta(inicialDeposito);
+    }
     public int getNumeroConta() {
         return numeroConta;
     }
@@ -21,14 +26,11 @@ public class Conta {
     public void setTitular(String titular) {
         this.titular = titular;
     }
-    public void setDeposito(double deposito) {
-        this.deposito = deposito;
+    public void addConta(double valor){
+        deposito += valor;
     }
-    public double addConta(double valor){
-        return this.deposito += valor;
-    }
-    public double saqueConta(double valor) {
-        return this.deposito -= (valor + 5.00);
+    public void saqueConta(double valor) {
+        this.deposito -= (valor + 5.0);
     }
     public double totalValor(){
         return this.deposito;
