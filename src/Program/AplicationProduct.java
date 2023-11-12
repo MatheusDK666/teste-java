@@ -11,13 +11,13 @@ public class AplicationProduct {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Product: ");
-        String name = sc.nextLine().toUpperCase();
+        //System.out.print("Product: ");
+        //String name = sc.nextLine().toUpperCase();
         System.out.print("Price: ");
         double price = sc.nextDouble();
         System.out.print("Quantity: ");
         int quantity = sc.nextInt();
-        Product product = new Product(name, price, quantity);
+        Product product = new Product(price, quantity);
 
         System.out.println("Update data product: " + product.toString());
         System.out.print("Add product quantity: ");
